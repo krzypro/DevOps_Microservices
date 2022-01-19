@@ -1,15 +1,12 @@
-#!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
-
-# Assumes that an image is built via `run_docker.sh`
+# Assumes that an image is built via `run_docker.ps1`
 
 # Step 1:
 # Create dockerpath
-dockerpath="pkrzysztoff/projecttag"
+$dockerpath="pkrzysztoff/projecttag"
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+Write-Host "Docker ID and Image: $dockerpath"
 docker login -u pkrzysztoff
 docker tag projecttag $dockerpath
 
